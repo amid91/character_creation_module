@@ -1,5 +1,5 @@
 # Тестовые данные.
-TEST_DATA: list['tuple'] = [
+TEST_DATA: list[tuple[int, str, bool]] = [
     (44, 'success', True),
     (16, 'failure', True),
     (4, 'success', False),
@@ -10,7 +10,7 @@ BONUS: float = 1.1
 ANTIBONUS: float = 0.8
 
 
-def add_rep(current_rep, rep_points, buf_effect):
+def add_rep(current_rep: float, rep_points: int, buf_effect: bool):
     current_rep += rep_points
     if buf_effect:
         return current_rep * BONUS
